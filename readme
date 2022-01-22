@@ -1,0 +1,10 @@
+Here's the task:
+Design a Tic Tac Toe API + server implementation, requirements:
+1. Users can create a game.
+2. Users can join a game.
+3. Users can place their piece on the board (X,Y).
+4. The game will end if a user won / there are no more moves with a status (won/lost/tie) per the requesting player.
+5. There should be a status API that returns (X/Y won, Tie, Playing).
+
+Javascript is ok, Typescript is preferred.
+A naive implementation is ok, we can discuss further enhancements later.
