@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { GamesModule } from './games/games.module';
+import { MongoModule } from 'nest-mongodb'
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    MongoModule.forRoot('mongodb://localhost', 'TicTacToe'),
+    GamesModule,
+  ],
 })
-export class AppModule {}
+export class AppModule { }
