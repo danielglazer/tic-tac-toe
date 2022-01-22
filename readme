@@ -8,3 +8,41 @@ Design a Tic Tac Toe API + server implementation, requirements:
 
 Javascript is ok, Typescript is preferred.
 A naive implementation is ok, we can discuss further enhancements later.
+
+
+How to run(commands for windows/linux machine): 
+git clone the project (require git to be installed)
+cd server
+npm i (require npm to be installed)
+you will also need to have mongodb instance running locally on the default port
+
+How to test:
+via postman on port 3000
+
+exposed rest endpoints:
+createGame: 
+  url-example: http://localhost:3000/games/
+  method: Post,
+  body: {}
+  response-example: 8fcadc65-3884-4c8b-89a5-c74e2fb24bc2
+joinGame:
+  url-example: http://localhost:3000/games/8fcadc65-3884-4c8b-89a5-c74e2fb24bc2
+  method: Put,
+  body: {
+    "displayName": "string",
+    "shape": "X"
+  }
+  response-example: 
+makeMove:
+  url-example: http://localhost:3000/games/8fcadc65-3884-4c8b-89a5-c74e2fb24bc2/move
+  method: Put,
+  body: {
+    "x": 1,
+    "y": 1
+  }
+  response-example: 
+getGameStatus:
+  url-example: http://localhost:3000/games/8fcadc65-3884-4c8b-89a5-c74e2fb24bc2/status
+  method: GET,
+  body: {}
+  response-example: X_WON
